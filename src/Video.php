@@ -31,6 +31,21 @@ class Video
         $this->setVideoId($videoId);
     }
 
+    public function curlProxy($url, $proxyServer, $proxyAuth) {
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_REFERER, "https://youtube.com/");
+        curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (X11; Ubuntu; Linux; rv:69.0) Gecko/20100101 Firefox/69.0");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($curl, CURLOPT_PROXY, $proxyServer);
+        curl_setopt($curl, CURLOPT_PROXYUSERPWD, $proxyAuth);
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        return $response;
+    }
+
     /**
      * Set the video ID and get the raw video information
      *
@@ -45,7 +60,11 @@ class Video
             throw new \InvalidArgumentException('Video Id is empty');
         }
 
-        parse_str(file_get_contents($this->videoInfoUrl . $this->videoId), $info);
+        $url = $this->videoInfoUrl . $this->videoId;
+        $proxyServer = "http://proxy.apify.com:8000";
+        $proxyAuth = env('APIFY_PROXY_USER').":".env('APIFY_PROXY_KEY');
+
+        parse_str($this->curlProxy($url, $proxyServer, $proxyAuth), $info);
 
         if (!isset($info['player_response'])) {
             throw new \Exception("Video not found");
