@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Smoqadam;
+namespace FireCentaur;
 
 
-use Smoqadam\Response\Details;
-use Smoqadam\Response\Formats;
-use Smoqadam\Response\Captions;
+use FireCentaur\Response\Details;
+use FireCentaur\Response\Formats;
+use FireCentaur\Response\Captions;
 
 class Video
 {
