@@ -1,5 +1,6 @@
 {
-    "name": "smoqadam/youtube-video-info",
+    "name": "firecentaur/youtube-video-info",
+    "description": "Downloads YouTube Captions with Apify Proxy ",
     "authors": [
         {
             "name": "Saeed M.",
