@@ -94,7 +94,7 @@ class Video
         if (array_key_exists('videoDetails', $this->videoInfo)){
             return new Details($this->videoInfo['videoDetails']);
         }else{
-            return [];
+            return new Details([]);
         }
 
     }
@@ -108,7 +108,7 @@ class Video
         if (array_key_exists('streamingData', $this->videoInfo)){
             return new Formats($this->videoInfo['streamingData']);
         }else{
-            return [];
+            return new Formats([]);
         }
 
     }
@@ -123,7 +123,7 @@ class Video
         if (array_key_exists('captions', $this->videoInfo)){
             return new Captions($this->videoInfo['captions'], $lang);
         }else{
-            return [];
+            return new Captions([]);
         }
     }
 }
