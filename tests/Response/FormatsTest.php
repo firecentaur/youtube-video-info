@@ -2,9 +2,9 @@
 
 namespace Response;
 
-use Smoqadam\Response\Formats;
+use FireCentaur\Response\Formats;
 use PHPUnit\Framework\TestCase;
-use Smoqadam\Video;
+use FireCentaur\Video;
 
 class FormatsTest extends TestCase
 {

@@ -1,8 +1,8 @@
 <?php
 
 
-use Smoqadam\Video;
-use Smoqadam\Response;
+use FireCentaur\Video;
+use FireCentaur\Response;
 
 require_once 'vendor/autoload.php';
 

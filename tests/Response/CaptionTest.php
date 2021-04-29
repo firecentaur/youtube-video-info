@@ -3,8 +3,8 @@
 namespace Response;
 
 use PHPUnit\Framework\TestCase;
-use Smoqadam\Response\Captions;
-use Smoqadam\Video;
+use FireCentaur\Response\Captions;
+use FireCentaur\Video;
 
 class CaptionTest extends TestCase
 {

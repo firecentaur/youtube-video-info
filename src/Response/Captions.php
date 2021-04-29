@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Smoqadam\Response;
+namespace FireCentaur\Response;
 
-use Smoqadam\Collection;
-use Smoqadam\Response\Entity\Subtitle;
+use FireCentaur\Collection;
+use FireCentaur\Response\Entity\Subtitle;
 
 class Captions extends Collection
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Smoqadam\Response\Entity;
+namespace FireCentaur\Response\Entity;
 
 
 class Subtitle implements \JsonSerializable

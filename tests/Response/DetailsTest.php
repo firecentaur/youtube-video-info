@@ -3,9 +3,9 @@
 namespace Response;
 
 use PHPUnit\Framework\TestCase;
-use Smoqadam\Response\Captions;
-use Smoqadam\Response\Details;
-use Smoqadam\Video;
+use FireCentaur\Response\Captions;
+use FireCentaur\Response\Details;
+use FireCentaur\Video;
 
 class DetailsTest extends TestCase
 {

@@ -9,7 +9,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Smoqadam\\": "src"
+      "FireCentaur\\": "src"
     }
   },
   "require": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Smoqadam\Response\Entity;
+namespace FireCentaur\Response\Entity;
 
 
 class Format implements \JsonSerializable

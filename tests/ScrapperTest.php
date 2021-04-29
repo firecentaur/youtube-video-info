@@ -2,10 +2,10 @@
 
 
 use PHPUnit\Framework\TestCase;
-use Smoqadam\Response\Captions;
-use Smoqadam\Response\Details;
-use Smoqadam\Response\Formats;
-use Smoqadam\Video;
+use FireCentaur\Response\Captions;
+use FireCentaur\Response\Details;
+use FireCentaur\Response\Formats;
+use FireCentaur\Video;
 
 class ScrapperTest extends TestCase
 {

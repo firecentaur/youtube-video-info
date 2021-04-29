@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Smoqadam\Response;
+namespace FireCentaur\Response;
 
 
 class Details

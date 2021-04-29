@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Smoqadam;
+namespace FireCentaur;
 
 
 class Collection implements \ArrayAccess, \Iterator, \Countable, \JsonSerializable

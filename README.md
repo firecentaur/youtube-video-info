@@ -4,7 +4,7 @@ Get the information about a youtube video
 
 ## Installation
 
-`$ composer require smoqadam/youtube-video-info:dev-master`
+`$ composer require FireCentaur/youtube-video-info:dev-master`
 
 
 ## Usage
@@ -15,8 +15,8 @@ it's so easy to get the information about a youtueb's video. Let's say we need t
 
 <?php
 
-use Smoqadam;
-use Smoqadam\Response\Entity\Subtitle;
+use FireCentaur;
+use FireCentaur\Response\Entity\Subtitle;
 
 ini_set('display_errors', 'On');
 require_once 'vendor/autoload.php';

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Smoqadam\Response;
+namespace FireCentaur\Response;
 
 
-use Smoqadam\Collection;
-use Smoqadam\Response\Entity\Format;
+use FireCentaur\Collection;
+use FireCentaur\Response\Entity\Format;
 
 class Formats extends Collection
 {
