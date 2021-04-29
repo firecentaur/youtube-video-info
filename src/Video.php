@@ -7,6 +7,7 @@ namespace FireCentaur;
 use FireCentaur\Response\Details;
 use FireCentaur\Response\Formats;
 use FireCentaur\Response\Captions;
+use Illuminate\Support\Facades\Log;
 
 class Video
 {
@@ -65,7 +66,11 @@ class Video
         $proxyAuth = env('APIFY_PROXY_USER').":".env('APIFY_PROXY_KEY');
 
         parse_str($this->curlProxy($url, $proxyServer, $proxyAuth), $info);
+        if (count($info)==0){
+            Log::error("Could not retrieve Video $url");
+            return false;
 
+        }
         if (!isset($info['player_response'])) {
             throw new \Exception("Video not found");
         }
