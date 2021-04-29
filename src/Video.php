@@ -110,6 +110,10 @@ class Video
      */
     public function getCaptions($lang = 'en'): Captions
     {
-        return new Captions($this->videoInfo['captions'], $lang);
+        if (array_key_exists('captions', $this->videoInfo)){
+            return new Captions($this->videoInfo['captions'], $lang);
+        }else{
+            return [];
+        }
     }
 }
