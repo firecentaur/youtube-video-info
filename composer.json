@@ -1,22 +1,25 @@
 {
-    "name": "firecentaur/youtube-video-info",
-    "description": "Downloads YouTube Captions with Apify Proxy ",
-    "authors": [
-        {
-            "name": "Saeed M.",
-            "email": "saeed.moqadam@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Smoqadam\\": "src"
-        }
-    },
-    "require": {
-        "ext-simplexml": "*",
-        "ext-json": "*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.5"
+  "name": "firecentaur/youtube-video-info",
+  "description": "Downloads YouTube Captions with Apify Proxy ",
+  "authors": [
+    {
+      "name": "Saeed M.",
+      "email": "saeed.moqadam@gmail.com"
     }
+  ],
+{
+  "license": "(LGPL-2.1-only or GPL-3.0-or-later)"
+},
+"autoload": {
+"psr-4": {
+"Smoqadam\\": "src"
+}
+},
+"require": {
+"ext-simplexml": "*",
+"ext-json": "*"
+},
+"require-dev": {
+"phpunit/phpunit": "^8.5"
+}
 }
