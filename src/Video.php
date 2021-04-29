@@ -91,7 +91,12 @@ class Video
      */
     public function getDetails(): Details
     {
-        return new Details($this->videoInfo['videoDetails']);
+        if (array_key_exists('videoDetails', $this->videoInfo)){
+            return new Details($this->videoInfo['videoDetails']);
+        }else{
+            return [];
+        }
+
     }
 
     /**
@@ -100,7 +105,12 @@ class Video
      */
     public function getFormats(): Formats
     {
-        return new Formats($this->videoInfo['streamingData']);
+        if (array_key_exists('streamingData', $this->videoInfo)){
+            return new Formats($this->videoInfo['streamingData']);
+        }else{
+            return [];
+        }
+
     }
 
     /**
