@@ -126,7 +126,7 @@ class Video
         if (array_key_exists('captions', $this->videoInfo)){
             return new Captions($this->videoInfo['captions'], $lang);
         }else{
-            return new Captions([]);
+            return new Captions([],$lang);
         }
     }
 }
