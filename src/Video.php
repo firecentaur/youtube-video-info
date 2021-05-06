@@ -15,7 +15,7 @@ class Video
      * @var string
      */
     private $videoId;
-
+    private $UA_file = __DIR__."/useragents.txt";
     /**
      * base url for getting the video information
      * @var string
@@ -31,11 +31,14 @@ class Video
     {
         $this->setVideoId($videoId);
     }
-
+    public function randomUseragent() {
+        $lines = file($this->UA_file);
+        return trim($lines[array_rand($lines)]);
+    }
     public function curlProxy($url, $proxyServer, $proxyAuth) {
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_REFERER, "https://youtube.com/");
-        curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (X11; Ubuntu; Linux; rv:69.0) Gecko/20100101 Firefox/69.0");
+        curl_setopt($curl, CURLOPT_USERAGENT, $this->randomUseragent());
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
