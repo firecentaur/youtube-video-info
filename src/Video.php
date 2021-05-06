@@ -57,7 +57,7 @@ class Video
      * @return $this
      * @throws \Exception
      */
-    public function setVideoId($videoId): self
+    public function setVideoId($videoId)
     {
         $this->videoId = $videoId;
         if (!$this->videoId) {
