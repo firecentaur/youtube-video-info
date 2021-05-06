@@ -131,6 +131,8 @@ class Video
             }
         } catch (CException $ex) {
             return new Captions([],$lang);
+        }catch (\Exception $ex) {
+            return new Captions([],$lang);
         }
 
 
