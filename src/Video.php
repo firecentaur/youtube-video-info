@@ -42,8 +42,8 @@ class Video
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-//        curl_setopt($curl, CURLOPT_PROXY, $proxyServer);
-//        curl_setopt($curl, CURLOPT_PROXYUSERPWD, $proxyAuth);
+        curl_setopt($curl, CURLOPT_PROXY, $proxyServer);
+        curl_setopt($curl, CURLOPT_PROXYUSERPWD, $proxyAuth);
         $response = curl_exec($curl);
         curl_close($curl);
 
@@ -65,7 +65,8 @@ class Video
         }
 
         $url = $this->videoInfoUrl . $this->videoId;
-        $proxyServer = "http://proxy.apify.com:8000";
+        $proxyServer = "proxy.apify.com:8000";
+        //
         $proxyAuth = env('APIFY_PROXY_USER').":".env('APIFY_PROXY_KEY');
 
         parse_str($this->curlProxy($url, $proxyServer, $proxyAuth), $info);
