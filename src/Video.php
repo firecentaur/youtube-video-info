@@ -65,7 +65,7 @@ class Video
         }
 
         $url = $this->videoInfoUrl . $this->videoId;
-        $proxyServer = "proxy.apify.com:8000";
+        $proxyServer = "http://proxy.apify.com:8000";
         //
         $proxyAuth = env('APIFY_PROXY_USER').":".env('APIFY_PROXY_KEY');
 
